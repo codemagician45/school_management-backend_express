@@ -12,15 +12,15 @@ const db = require("./app/models");
 const User = db.user;
 
 // db.sequelize.sync();
-db.sequelize.sync({ force: true }).then(() => {
-  createAdmin();
-});
+// db.sequelize.sync({ force: true }).then(() => {
+//   createAdmin();
+// });
 
 const createAdmin = () => {
   User.create({
     role: 'admin',
     email: 'admin',
-    password: 'admin',
+    password: 'admin1',
   });
 };
 
@@ -35,5 +35,6 @@ require('./app/routes/dashboard/employees')(app);
 require('./app/routes/dashboard/awards')(app);
 require('./app/routes/dashboard/notes')(app);
 require('./app/routes/dashboard/events')(app);
+require('./app/routes/dashboard/schools')(app);
 
 module.exports = app;

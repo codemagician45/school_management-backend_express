@@ -31,5 +31,5 @@ db.note = require("../models/note.model.js")(sequelize, Sequelize);
 db.event = require("../models/event.model.js")(sequelize, Sequelize);
 
 db.school = require("../models/school.model.js")(sequelize, Sequelize);
-
+db.university = require("../models/university.model.js")(sequelize, Sequelize);
 module.exports = db;

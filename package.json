@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "concurrently \"node ./bin/www\" \"cd client && serve -s build\"",
-    "dev": "concurrently \" node ./bin/www\""
+    "dev": "concurrently \" nodemon ./bin/www\""
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

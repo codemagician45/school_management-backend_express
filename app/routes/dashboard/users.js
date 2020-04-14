@@ -1,4 +1,4 @@
-const controller = require("../../../app/controllers/tables.controller");
+const controller = require("../../controllers/users.controller");
 
 module.exports = function (app) {
     app.use(function (req, res, next) {
@@ -8,6 +8,5 @@ module.exports = function (app) {
         );
         next();
     });
-
-    app.get("/api/schools", controller.getSchools);
-};
+    app.get("/api/users", controller.allUsers)
+}

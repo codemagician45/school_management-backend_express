@@ -37,5 +37,6 @@ require('./app/routes/dashboard/notes')(app);
 require('./app/routes/dashboard/events')(app);
 require('./app/routes/dashboard/schools')(app);
 require('./app/routes/dashboard/universities')(app);
+require('./app/routes/dashboard/fairs')(app);
 
 module.exports = app;

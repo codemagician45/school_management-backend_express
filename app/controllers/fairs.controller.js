@@ -1,5 +1,6 @@
 const db = require('../models');
 const Fair = db.fair;
+const Curriculum = db.curriculum;
 
 // exports.getFair = (req, res) => {
 //     const id = req.body.id;
@@ -15,3 +16,7 @@ exports.getAllFairs = (req, res) => {
         results => res.send(results)
     )
 };
+
+exports.getCurriculums = (req, res) => {
+    Curriculum.findAll({ attributes: ['id', 'code', 'label'] }).then(results => res.send(results))
+}

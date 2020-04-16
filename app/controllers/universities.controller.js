@@ -10,8 +10,28 @@ exports.getUniversity = (req, res) => {
 
 exports.getAllUniversities = (req, res) => {
     University.findAll({
-        attributes: ['id', 'name']
+        // attributes: ['id', 'name']
     }).then(
         results => res.send(results)
     )
+};
+
+exports.updateUniversity = (req, res) => {
+    console.log("userUpdate", req.body)
+    const data = JSON.parse(JSON.stringify(req.body));
+    console.log("parsed", data)
+    University.update({
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        website: data.website,
+        map_link: data.map_link
+    }, {
+        where: { id: data.id }
+    }).then(
+        University.findAll({ where: { id: data.id } }).then(
+            results => res.send(results)
+        )
+    )
+
 };

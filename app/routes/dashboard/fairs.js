@@ -10,4 +10,5 @@ module.exports = function (app) {
     });
 
     app.get("/api/fairs", controller.getAllFairs);
+    app.get("/api/fairs/curriculums", controller.getCurriculums);
 };

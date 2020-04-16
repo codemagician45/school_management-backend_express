@@ -13,15 +13,15 @@ const User = db.user;
 
 // db.sequelize.sync({ force: true });
 // db.sequelize.sync({ force: true }).then(() => {
-//   createAdmin();
+//     createAdmin();
 // });
 
 // const createAdmin = () => {
-//   User.create({
-//     role: 'admin',
-//     email: 'admin',
-//     password: 'admin1',
-//   });
+//     User.create({
+//         role: 'admin',
+//         email: 'admin',
+//         password: 'admin1',
+//     });
 // };
 
 require('./app/routes/auth')(app);
@@ -38,5 +38,6 @@ require('./app/routes/dashboard/events')(app);
 require('./app/routes/dashboard/schools')(app);
 require('./app/routes/dashboard/universities')(app);
 require('./app/routes/dashboard/fairs')(app);
+require('./app/routes/dashboard/users')(app);
 
 module.exports = app;

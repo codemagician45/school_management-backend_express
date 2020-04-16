@@ -11,4 +11,5 @@ module.exports = function (app) {
 
     app.post("/api/university", controller.getUniversity);
     app.get("/api/universities", controller.getAllUniversities);
+    app.put("/api/university/update", controller.updateUniversity);
 };

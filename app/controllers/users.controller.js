@@ -57,7 +57,8 @@ exports.updateUser = (req, res) => {
       email: data.email,
       phone: data.phone,
       ext: data.ext,
-      title: data.title
+      title: data.title,
+      logo: data.logo
     }, {
       where: { id: data.id }
     }).then(

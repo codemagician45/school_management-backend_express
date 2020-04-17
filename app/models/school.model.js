@@ -33,7 +33,23 @@ module.exports = (sequelize, Sequelize) => {
         },
         emails: {
             type: Sequelize.STRING
+        },
+        number_grade11: {
+            type: Sequelize.INTEGER
+        },
+        number_grade12: {
+            type: Sequelize.INTEGER
+        },
+        curriculum_id: {
+            type: Sequelize.INTEGER
+        },
+        fees_grade11: {
+            type: Sequelize.INTEGER
+        },
+        fees_grade12: {
+            type: Sequelize.INTEGER
         }
+
     });
 
     return School;

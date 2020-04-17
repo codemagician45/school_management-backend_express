@@ -11,7 +11,7 @@ const Curriculum = db.curriculum;
 
 exports.getAllFairs = (req, res) => {
     Fair.findAll({
-        attributes: ['start_date', 'end_date', 'students_grade12_number', 'students_grade11_number', 'universities_max']
+        attributes: ['start_date', 'end_date', 'students_grade12_number', 'students_grade11_number', 'universities_max', 'school_id']
     }).then(
         results => res.send(results)
     )

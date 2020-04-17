@@ -3,7 +3,7 @@ const University = db.university;
 
 exports.getUniversity = (req, res) => {
     const id = req.body.id;
-    University.findAll({ where: { id: id }, attributes: ['id', 'name', 'phone', 'email', 'website', 'map_link', 'compus', 'country', 'city', 'address', 'users', 'emails'] }).then(
+    University.findAll({ where: { id: id }, attributes: ['id', 'name', 'phone', 'email', 'website', 'map_link', 'compus', 'country', 'city', 'address', 'users', 'emails', 'logo'] }).then(
         results => res.send(results)
     )
 };
@@ -25,7 +25,14 @@ exports.updateUniversity = (req, res) => {
         email: data.email,
         phone: data.phone,
         website: data.website,
-        map_link: data.map_link
+        map_link: data.map_link,
+        compus: data.compus && data.compus.toString(),
+        country: data.country && data.country.toString(),
+        city: data.city && data.city.toString(),
+        address: data.address && data.address.toString(),
+        users: data.users && data.users.toString(),
+        emails: data.emails && data.emails.toString(),
+        logo: data.logo && data.logo
     }, {
         where: { id: data.id }
     }).then(

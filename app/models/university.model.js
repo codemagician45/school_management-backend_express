@@ -36,7 +36,10 @@ module.exports = (sequelize, Sequelize) => {
         },
         emails: {
             type: Sequelize.STRING
-        }
+        },
+        logo: {
+            type: Sequelize.TEXT       //longtext        
+        },
 
     });
     return University;

@@ -62,9 +62,11 @@ exports.deleteEvent = (req, res) => {
 };
 
 exports.getSchools = (req, res) => {
-  School.findAll({
-    attributes: ['id', 'name', 'email', 'phone', 'city', 'website', 'users', 'emails']
-  }).then(
+  School.findAll(
+    {
+      attributes: [`id`, `name`, `email`, `phone`, `address1`, `address2`, `country`, `city`, `website`, `users`, `emails`, `number_grade11`, `number_grade12`, `curriculum_id`, `fees_grade11`, `fees_grade12`]
+    }
+  ).then(
     results => {
       // console.log("schoolget", results)
       res.send(results)

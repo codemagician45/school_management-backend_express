@@ -86,7 +86,7 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING
     },
     logo: {
-      type: Sequelize.STRING
+      type: Sequelize.TEXT       //longtext        
     },
     phone: {
       type: Sequelize.STRING

@@ -34,4 +34,5 @@ db.school = require("../models/school.model.js")(sequelize, Sequelize);
 db.university = require("../models/university.model.js")(sequelize, Sequelize);
 db.fair = require("../models/fair.model.js")(sequelize, Sequelize);
 db.curriculum = require("../models/curriculum.model.js")(sequelize, Sequelize);
+db.counselor = require("../models/counselor.model.js")(sequelize, Sequelize);
 module.exports = db;

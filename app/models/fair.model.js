@@ -2,9 +2,10 @@ module.exports = (sequelize, Sequelize) => {
     const Fair = sequelize.define("fairs", {
         id: {
             type: Sequelize.INTEGER,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true,
         },
-        start_data: {
+        start_date: {
             type: Sequelize.DATE
         },
         end_date: {

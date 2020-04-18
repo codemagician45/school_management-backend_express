@@ -39,5 +39,6 @@ require('./app/routes/dashboard/schools')(app);
 require('./app/routes/dashboard/universities')(app);
 require('./app/routes/dashboard/fairs')(app);
 require('./app/routes/dashboard/users')(app);
+require('./app/routes/dashboard/counselors')(app);
 
 module.exports = app;

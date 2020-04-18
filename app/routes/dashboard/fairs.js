@@ -11,4 +11,6 @@ module.exports = function (app) {
 
     app.get("/api/fairs", controller.getAllFairs);
     app.get("/api/fairs/curriculums", controller.getCurriculums);
+    app.post("/api/fairs/create", controller.createNewFair);
+    app.put("/api/fairs/update", controller.editFair);
 };

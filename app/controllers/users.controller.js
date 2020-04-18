@@ -48,7 +48,7 @@ exports.addUser = (req, res) => {
 
 exports.updateUser = (req, res) => {
   const data = JSON.parse(JSON.stringify(req.body));
-  console.log(data)
+  // console.log(data)
   if (data.university_id)
     User.update({
       university_id: data.university_id,
@@ -73,7 +73,8 @@ exports.updateUser = (req, res) => {
       email: data.email,
       phone: data.phone,
       ext: data.ext,
-      title: data.title
+      title: data.title,
+      logo: data.logo
     }, {
       where: { id: data.id }
     }).then(
